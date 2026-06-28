@@ -1,0 +1,295 @@
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  originalPrice: number;
+  category: "Jeans" | "Shirts" | "T-Shirts" | "Accessories";
+  image: string;
+  description: string;
+  badge?: string;
+  isNew?: boolean;
+}
+
+export interface Review {
+  id: number;
+  name: string;
+  rating: number;
+  text: string;
+  date: string;
+  verified: boolean;
+  initials: string;
+}
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: "Slim Fit Blue Denim",
+    price: 1299,
+    originalPrice: 1799,
+    category: "Jeans",
+    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80",
+    description: "Classic slim fit blue denim crafted for a sharp, modern silhouette.",
+    badge: "Best Seller",
+  },
+  {
+    id: 2,
+    name: "Black Skinny Stretch Jeans",
+    price: 1199,
+    originalPrice: 1599,
+    category: "Jeans",
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80",
+    description: "Super-stretch black jeans with premium comfort for all-day wear.",
+    badge: "New Arrival",
+    isNew: true,
+  },
+  {
+    id: 3,
+    name: "Regular Fit Dark Wash Jeans",
+    price: 999,
+    originalPrice: 1399,
+    category: "Jeans",
+    image: "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=600&q=80",
+    description: "Versatile dark wash denim with a relaxed regular fit.",
+  },
+  {
+    id: 4,
+    name: "Cargo Utility Jeans",
+    price: 1499,
+    originalPrice: 1999,
+    category: "Jeans",
+    image: "https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=600&q=80",
+    description: "Multi-pocket cargo jeans blending utility with style.",
+    badge: "Trending",
+  },
+  {
+    id: 5,
+    name: "Premium White Formal Shirt",
+    price: 899,
+    originalPrice: 1299,
+    category: "Shirts",
+    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80",
+    description: "Crisp white formal shirt in premium cotton — boardroom ready.",
+    badge: "Best Seller",
+  },
+  {
+    id: 6,
+    name: "Oxford Blue Casual Shirt",
+    price: 799,
+    originalPrice: 1099,
+    category: "Shirts",
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80",
+    description: "Breathable Oxford weave casual shirt for effortless everyday style.",
+  },
+  {
+    id: 7,
+    name: "Floral Printed Shirt",
+    price: 849,
+    originalPrice: 1199,
+    category: "Shirts",
+    image: "https://images.unsplash.com/photo-1563630423918-b58f07291d9e?w=600&q=80",
+    description: "Bold floral print shirt that commands attention at any gathering.",
+    badge: "New Arrival",
+    isNew: true,
+  },
+  {
+    id: 8,
+    name: "Striped Half-Sleeve Shirt",
+    price: 749,
+    originalPrice: 999,
+    category: "Shirts",
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80",
+    description: "Classic stripes, half sleeves — the perfect summer staple.",
+  },
+  {
+    id: 9,
+    name: "Solid Black Round-Neck Tee",
+    price: 499,
+    originalPrice: 699,
+    category: "T-Shirts",
+    image: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=600&q=80",
+    description: "Premium 180 GSM cotton tee that pairs with anything.",
+    badge: "Best Seller",
+  },
+  {
+    id: 10,
+    name: "Graphic Print T-Shirt",
+    price: 599,
+    originalPrice: 799,
+    category: "T-Shirts",
+    image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80",
+    description: "Statement graphic tee with bold artwork on heavy-weight cotton.",
+    badge: "Trending",
+  },
+  {
+    id: 11,
+    name: "Classic White Polo",
+    price: 649,
+    originalPrice: 899,
+    category: "T-Shirts",
+    image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80",
+    description: "Timeless white polo — smart-casual perfection for every season.",
+  },
+  {
+    id: 12,
+    name: "Navy Blue V-Neck Tee",
+    price: 549,
+    originalPrice: 749,
+    category: "T-Shirts",
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=600&q=80",
+    description: "Relaxed V-neck in a rich navy hue, soft against the skin.",
+    isNew: true,
+  },
+  {
+    id: 13,
+    name: "Genuine Leather Belt",
+    price: 599,
+    originalPrice: 849,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80",
+    description: "Full-grain leather belt with brushed silver buckle.",
+    badge: "Best Seller",
+  },
+  {
+    id: 14,
+    name: "Snapback Sports Cap",
+    price: 399,
+    originalPrice: 599,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80",
+    description: "Adjustable snapback cap with embroidered logo detail.",
+  },
+  {
+    id: 15,
+    name: "Classic Aviator Sunglasses",
+    price: 799,
+    originalPrice: 1199,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80",
+    description: "Polarised aviator sunglasses with UV400 protection.",
+    badge: "New Arrival",
+    isNew: true,
+  },
+  {
+    id: 16,
+    name: "Canvas Tote Bag",
+    price: 449,
+    originalPrice: 649,
+    category: "Accessories",
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
+    description: "Heavy-duty canvas tote — your everyday carry companion.",
+  },
+];
+
+export const reviews: Review[] = [
+  {
+    id: 1,
+    name: "Raj Kumar Sharma",
+    rating: 5,
+    text: "Absolutely love the quality! The slim fit jeans are perfect — comfortable and stylish. Will definitely shop again from UMANFORCEFALNA.",
+    date: "March 2025",
+    verified: true,
+    initials: "RK",
+  },
+  {
+    id: 2,
+    name: "Arjun Singh",
+    rating: 5,
+    text: "Best men's store in Falna. The shirts are exactly what I was looking for — premium fabric at an affordable price. Highly recommended!",
+    date: "February 2025",
+    verified: true,
+    initials: "AS",
+  },
+  {
+    id: 3,
+    name: "Vikram Patel",
+    rating: 4,
+    text: "Great collection of t-shirts. Bought three and all of them fit perfectly. The staff was very helpful in choosing the right size.",
+    date: "February 2025",
+    verified: true,
+    initials: "VP",
+  },
+  {
+    id: 4,
+    name: "Deepak Meena",
+    rating: 5,
+    text: "The formal shirts are top-notch quality. Bought two for office wear and got compliments on the very first day. Worth every rupee!",
+    date: "January 2025",
+    verified: true,
+    initials: "DM",
+  },
+  {
+    id: 5,
+    name: "Sunil Rajput",
+    rating: 4,
+    text: "Good variety of jeans at reasonable prices. The dark wash jeans I bought are very durable. Will come back for more.",
+    date: "January 2025",
+    verified: true,
+    initials: "SR",
+  },
+  {
+    id: 6,
+    name: "Manish Verma",
+    rating: 5,
+    text: "My go-to shop for men's wear in Falna. The trendy designs are always updated and the prices are very competitive. Excellent service!",
+    date: "December 2024",
+    verified: true,
+    initials: "MV",
+  },
+  {
+    id: 7,
+    name: "Hemant Choudhary",
+    rating: 5,
+    text: "Purchased a cargo jeans and a polo t-shirt. Both are excellent quality. The stitching is very clean and the fit is perfect.",
+    date: "December 2024",
+    verified: true,
+    initials: "HC",
+  },
+  {
+    id: 8,
+    name: "Dinesh Saini",
+    rating: 4,
+    text: "Affordable and stylish clothing. The printed shirts are unique and get a lot of attention. Happy with my purchase.",
+    date: "November 2024",
+    verified: true,
+    initials: "DS",
+  },
+  {
+    id: 9,
+    name: "Kapil Sharma",
+    rating: 5,
+    text: "The leather belt I bought is of excellent quality — exactly what I expected from a premium store. Very happy with the purchase.",
+    date: "November 2024",
+    verified: true,
+    initials: "KS",
+  },
+  {
+    id: 10,
+    name: "Rohit Kumar",
+    rating: 4,
+    text: "Great collection! The graphic tees are very cool and the fabric is comfortable. Fast service and good packaging too.",
+    date: "October 2024",
+    verified: true,
+    initials: "RK",
+  },
+  {
+    id: 11,
+    name: "Ajay Bishnoi",
+    rating: 5,
+    text: "This store has transformed my wardrobe. Every item I bought here is premium quality. The staff understands fashion trends very well.",
+    date: "October 2024",
+    verified: true,
+    initials: "AB",
+  },
+  {
+    id: 12,
+    name: "Pramod Jain",
+    rating: 4,
+    text: "Reliable store with genuine quality products. The Oxford shirts are a highlight — perfect for casual and semi-formal occasions alike.",
+    date: "September 2024",
+    verified: true,
+    initials: "PJ",
+  },
+];
+
+export const categories = ["Jeans", "Shirts", "T-Shirts", "Accessories"] as const;
+export type Category = typeof categories[number];
